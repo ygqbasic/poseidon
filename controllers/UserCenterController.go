@@ -3,9 +3,9 @@ package controllers
 import (
 	"strings"
 
-	"github.com/yunnet/gardens/enums"
-	"github.com/yunnet/gardens/models"
-	"github.com/yunnet/gardens/utils"
+	"github.com/ygqbasic/poseidon/enums"
+	"github.com/ygqbasic/poseidon/models"
+	"github.com/ygqbasic/poseidon/utils"
 
 	"github.com/astaxie/beego/orm"
 )

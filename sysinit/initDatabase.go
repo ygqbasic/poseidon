@@ -1,7 +1,7 @@
 package sysinit
 
 import (
-	_ "github.com/yunnet/gardens/models"
+	_ "github.com/ygqbasic/poseidon/models"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"

@@ -3,8 +3,9 @@
 # 简介
 基于Beego开发的易用、易扩展、界面友好的轻量级功能权限管理系统。前端框架基于AdminLTE2进行资源整合，包含了多款优秀的插件，是笔者对多年后台管理系统开发经验精华的萃取。
 本系统非常适合进行后台管理系统开发，统一的代码和交互给二次开发带来极大的方便，在没有前端工程师参与的情况下就可以进行快速的模块式开发，并保证用户使用的友好性和易用性。系统里整合了众多优秀的资源，在此感谢各位大神的无私奉献。
-# 非原创
+# 框架说明
   框架来源于 https://github.com/lhtzbj12/sdrms
+
 本文博客
 # 特点
 1. 分页列表页面的搜索条件、搜索面板、PageSize、当前页数、显示/隐藏列在变化时自动保存，页面刷新后、重新进入时，这些状态依然保持；
@@ -44,7 +45,7 @@
 1. 安装golang环境（ 略）
 2. 运行MySQL和Redis
 3. 安装本系统
-<br>`go get github.com/yunnet/gardens`
+<br>`go get github.com/ygqbasic/poseidon`
 4. 将doc目录下的gdkxdl.sql和kxtimingdata.sql导入mysql(业务需求，分库治理)
 5. 修改配置文件 `conf/app.conf`
 6. 运行在gdkxdl目录使用beego官方提供的命令运行

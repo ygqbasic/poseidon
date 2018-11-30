@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/yunnet/gardens/enums"
-	"github.com/yunnet/gardens/models"
+	"github.com/ygqbasic/poseidon/enums"
+	"github.com/ygqbasic/poseidon/models"
 )
 
 type TotalDtuRowsController struct {

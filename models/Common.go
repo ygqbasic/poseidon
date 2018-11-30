@@ -1,6 +1,6 @@
 package models
 
-import "github.com/yunnet/gardens/enums"
+import "github.com/ygqbasic/poseidon/enums"
 
 type JsonResult struct {
 	Code enums.JsonResultCode `json:"code"`

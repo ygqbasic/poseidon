@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/yunnet/gardens/models"
+	"github.com/ygqbasic/poseidon/models"
 )
 
 type TotalCollectRateController struct {
