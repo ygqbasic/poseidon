@@ -1,9 +1,10 @@
 package models
 
 import (
-	"time"
-	"strings"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/astaxie/beego/orm"
 )
 
@@ -30,7 +31,7 @@ type EquipmentOverviewQueryParam struct {
 const C_SQL_EQUIPMENTOVERVIEW = "SELECT collect_date, customer_no, customer_name, dtu_no, meter_address, meter_type_no, meter_type, gateway_no, gateway_desc, need_rows, rows, (rows/need_rows*100) as rate FROM v_equipment_overview " +
 	"WHERE collect_date BETWEEN '%s' and '%s' ORDER BY customer_no, collect_date, dtu_no, meter_address"
 
-func EquipmentOverviewPageList(params *EquipmentOverviewQueryParam) ([] *EquipmentOverview, int64) {
+func EquipmentOverviewPageList(params *EquipmentOverviewQueryParam) ([]*EquipmentOverview, int64) {
 	if len(strings.TrimSpace(params.CollectDate)) <= 0 {
 		return nil, 0
 	}
@@ -40,9 +41,9 @@ func EquipmentOverviewPageList(params *EquipmentOverviewQueryParam) ([] *Equipme
 	beginTime := ary[0]
 	endTime := ary[1]
 
-	data := make([] *EquipmentOverview, 0)
+	data := make([]*EquipmentOverview, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := fmt.Sprintf(C_SQL_EQUIPMENTOVERVIEW,
 		beginTime,
 		endTime,
@@ -60,7 +61,7 @@ func EquipmentOverviewPageList(params *EquipmentOverviewQueryParam) ([] *Equipme
 	return data, total
 }
 
-func EquipmentOverviewDataList(params *EquipmentOverviewQueryParam) [] *EquipmentOverview {
+func EquipmentOverviewDataList(params *EquipmentOverviewQueryParam) []*EquipmentOverview {
 	params.Limit = 65535
 	params.Sort = "collect_date"
 	params.Order = "asc"

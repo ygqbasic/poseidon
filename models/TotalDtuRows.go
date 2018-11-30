@@ -1,9 +1,10 @@
 package models
 
 import (
-	"time"
-	"strings"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/astaxie/beego/orm"
 )
 
@@ -24,10 +25,10 @@ type TotalDtuRowsQueryParam struct {
 }
 
 const C_SQL_TOTALDTUROWS = "SELECT ct.collect_date, ct.dtu_no, ct.meter_address, dt.need_rows, ct.`rows`, (ct.`rows`/ dt.need_rows * 100) as rate FROM collect_total_dtu_rows as ct " +
-	"LEFT JOIN gdkxdl.v_equipment_dtu_config as dt ON ct.dtu_no = dt.dtu_no " +
+	"LEFT JOIN yfmicro.v_equipment_dtu_config as dt ON ct.dtu_no = dt.dtu_no " +
 	"WHERE ct.collect_date BETWEEN '%s' and '%s' and ct.dtu_no like '%s%%' and ct.meter_address = %s"
 
-func TotalDtuRowsPageList(params *TotalDtuRowsQueryParam) ([] *TotalDtuRows, int64) {
+func TotalDtuRowsPageList(params *TotalDtuRowsQueryParam) ([]*TotalDtuRows, int64) {
 	if len(strings.TrimSpace(params.CollectDate)) <= 0 {
 		return nil, 0
 	}
@@ -43,9 +44,9 @@ func TotalDtuRowsPageList(params *TotalDtuRowsQueryParam) ([] *TotalDtuRows, int
 	beginTime := ary[0]
 	endTime := ary[1]
 
-	data := make([] *TotalDtuRows, 0)
+	data := make([]*TotalDtuRows, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := fmt.Sprintf(C_SQL_TOTALDTUROWS,
 		beginTime,
 		endTime,
@@ -65,7 +66,7 @@ func TotalDtuRowsPageList(params *TotalDtuRowsQueryParam) ([] *TotalDtuRows, int
 	return data, total
 }
 
-func TotalDtuRowsDataList(params *TotalDtuRowsQueryParam) [] *TotalDtuRows {
+func TotalDtuRowsDataList(params *TotalDtuRowsQueryParam) []*TotalDtuRows {
 	params.Limit = 65535
 	params.Sort = "collect_date"
 	params.Order = "asc"

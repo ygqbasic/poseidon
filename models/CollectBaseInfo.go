@@ -93,7 +93,7 @@ func CollectBaseInfoPageList(params *CollectBaseInfoQueryParam) ([] *CollectBase
 
 	data := make([] *CollectBaseInfo, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 
 	var total int64
 	sql := fmt.Sprintf(`SELECT count(1) as rows		 
@@ -153,7 +153,7 @@ func CollectBaseInfoDataList(params *CollectBaseInfoQueryParam) [] *CollectBaseI
 //今日采集进度查询
 func GetDtuRowsTodayList() ([] *DtuRowOfDay, error) {
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := "call p_dtu_day_row_today()"
 	data := make([] *DtuRowOfDay, 0)
 	_, err := o.Raw(sql).QueryRows(&data)
@@ -166,7 +166,7 @@ func GetDtuRowsTodayList() ([] *DtuRowOfDay, error) {
 //取月采集数量
 func GetCollectRowsOfMonth() ([] *CollectCountOfMonth, error) {
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := fmt.Sprintf("SELECT collect_date, `rows` FROM v_collect_total_rows where collect_date <'%s'", time.Now().Format("2006-01-02"))
 	data := make([] *CollectCountOfMonth, 0)
 	_, err := o.Raw(sql).QueryRows(&data)
@@ -180,7 +180,7 @@ func GetCollectRowsOfMonth() ([] *CollectCountOfMonth, error) {
 func GetOverviewToday(choiceDate string) ([] *OverviewToday, error) {
 	data := make([] *OverviewToday, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := fmt.Sprintf(`call p_collect_overview('%s')`, choiceDate)
 	_, err := o.Raw(sql).QueryRows(&data)
 	if err != nil {

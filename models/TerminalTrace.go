@@ -1,9 +1,10 @@
 package models
 
 import (
-	"time"
-	"strings"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/astaxie/beego/orm"
 )
 
@@ -23,9 +24,9 @@ type TerminalTraceQueryParam struct {
 }
 
 const C_SQL_TERMINAL_TRACE_ROWS = "SELECT count(1) as `rows` FROM collect_login_trace  where collect_time >= '%s' and collect_time <= '%s' and dtu_no like '%s%%' and meter_address like '%s%%' "
-const C_SQL_TERMINAL_TRACE  = `SELECT collect_time, dtu_no, meter_address, remote_address, linked FROM collect_login_trace where collect_time >= '%s' and collect_time <= '%s' and dtu_no like '%s%%' and meter_address like '%s%%' `
+const C_SQL_TERMINAL_TRACE = `SELECT collect_time, dtu_no, meter_address, remote_address, linked FROM collect_login_trace where collect_time >= '%s' and collect_time <= '%s' and dtu_no like '%s%%' and meter_address like '%s%%' `
 
-func TerminalTracePageList(params *TerminalTraceQueryParam) ([] *TerminalTrace, int64) {
+func TerminalTracePageList(params *TerminalTraceQueryParam) ([]*TerminalTrace, int64) {
 	if len(strings.TrimSpace(params.CollectTime)) <= 0 {
 		return nil, 0
 	}
@@ -35,9 +36,9 @@ func TerminalTracePageList(params *TerminalTraceQueryParam) ([] *TerminalTrace, 
 	beginTime := ary[0] + " 00:00:00"
 	endTime := ary[1] + " 23:59:59"
 
-	data := make([] *TerminalTrace, 0)
+	data := make([]*TerminalTrace, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 
 	var total int64
 	sql := fmt.Sprintf(C_SQL_TERMINAL_TRACE_ROWS, beginTime, endTime, params.DTU_no, params.MeterAddress)

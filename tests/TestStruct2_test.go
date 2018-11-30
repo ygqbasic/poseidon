@@ -1,14 +1,16 @@
 package test
 
 import (
-	"testing"
+	"encoding/json"
 	"fmt"
 	"strconv"
-	"encoding/json"
+	"testing"
+
 	"github.com/astaxie/beego/orm"
 
-	_ "github.com/go-sql-driver/mysql"
 	"time"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type (
@@ -43,7 +45,7 @@ type (
 )
 
 func TestStruct2JSON(t *testing.T) {
-	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/gdkxdl?charset=utf8&loc=Asia%2FShanghai", 30)
+	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/yfmicro?charset=utf8&loc=Asia%2FShanghai", 30)
 	sql := "SELECT customer_id, customer_name, dtu_no, meter_address, meter_type_no, collect_config_name FROM v_customer_for_meter"
 	lists := make([]*CustomerForMeter, 0)
 	_, err := orm.NewOrm().Raw(sql).QueryRows(&lists)
@@ -95,7 +97,7 @@ func TestStruct2JSON(t *testing.T) {
 }
 
 func TestRows(t *testing.T) {
-	orm.RegisterDataBase("default", "mysql", "root:root@tcp(120.76.200.33:3306)/kxtimingdata?charset=utf8&loc=Asia%2FShanghai", 30)
+	orm.RegisterDataBase("default", "mysql", "root:root@tcp(120.76.200.33:3306)/yftimingdata?charset=utf8&loc=Asia%2FShanghai", 30)
 	days := time.Now().Format("2006_01_02")
 	sql := "SELECT count(1) as rows FROM collect_base_info_" + days
 	o := orm.NewOrm()
@@ -106,4 +108,3 @@ func TestRows(t *testing.T) {
 	}
 	fmt.Printf("rows = %d", rows)
 }
-

@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50711
  Source Host           : localhost:3306
- Source Schema         : kxtimingdata
+ Source Schema         : yftimingdata
 
  Target Server Type    : MySQL
  Target Server Version : 50711
@@ -20831,133 +20831,133 @@ CREATE TABLE `collect_total_p_at_ee_year`  (
 -- View structure for collect_attach_info_2017_08_18
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_08_18`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_08_18` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-08-18','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-18','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_08_18` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-08-18','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-18','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2017_08_19
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_08_19`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_08_19` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-08-19','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-19','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_08_19` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-08-19','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-19','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2017_09_14
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_09_14`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_14` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-14','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_14` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-14','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2017_09_26
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_09_26`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_26` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-26','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-26','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_26` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-26','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-26','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2017_09_30
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_09_30`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_30` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-30','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-30','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_09_30` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-09-30','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-30','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2017_10_09
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2017_10_09`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_10_09` AS ( select *  from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2017-10-09','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-09','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2017_10_09` AS ( select *  from yftimingdata.collect_attach_info where collect_time >= str_to_date('2017-10-09','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-09','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_attach_info_2018_02_01
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_attach_info_2018_02_01`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2018_02_01` AS ( select * from kxtimingdata.collect_attach_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_attach_info_2018_02_01` AS ( select * from yftimingdata.collect_attach_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_14
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_14`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_14` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-14','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_14` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-14','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_16
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_16`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_16` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-16','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-16','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_16` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-16','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-16','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_18
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_18`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_18` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-18','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-18','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_18` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-18','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-18','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_19
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_19`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_19` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-19','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-19','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_19` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-19','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-19','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_20
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_20`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_20` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-20','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-20','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_20` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-20','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-20','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_08_24
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_08_24`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_24` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-08-24','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-24','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_08_24` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-08-24','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-08-24','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_11
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_11`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_11` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-11','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-11','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_11` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-11','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-11','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_12
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_12`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_12` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-12','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-12','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_12` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-12','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-12','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_14
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_14`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_14` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-14','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_14` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-14','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-14','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_22
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_22`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_22` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-22','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-22','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_22` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-22','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-22','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_26
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_26`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_26` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-26','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-26','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_26` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-26','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-26','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_09_30
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_09_30`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_30` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-09-30','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-30','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_09_30` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-09-30','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-09-30','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_10_09
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_10_09`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_10_09` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-10-09','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-09','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_10_09` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-10-09','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-09','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2017_10_16
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2017_10_16`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_10_16` AS ( select *  from kxtimingdata.collect_base_info where collect_time >= str_to_date('2017-10-16','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-16','%Y-%m-%d'),interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2017_10_16` AS ( select *  from yftimingdata.collect_base_info where collect_time >= str_to_date('2017-10-16','%Y-%m-%d') and collect_time< date_add(str_to_date('2017-10-16','%Y-%m-%d'),interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_2018_02_01
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_base_info_2018_02_01`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2018_02_01` AS ( select * from kxtimingdata.collect_base_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_base_info_2018_02_01` AS ( select * from yftimingdata.collect_base_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for collect_base_info_desc
@@ -20969,7 +20969,7 @@ CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `col
 -- View structure for collect_other_info_2018_02_01
 -- ----------------------------
 DROP VIEW IF EXISTS `collect_other_info_2018_02_01`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_other_info_2018_02_01` AS ( select * from kxtimingdata.collect_other_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`%` SQL SECURITY DEFINER VIEW `collect_other_info_2018_02_01` AS ( select * from yftimingdata.collect_other_info where collect_time >= str_to_date('2018-02-01','%Y-%m-%d') and collect_time < date_add(str_to_date('2018-02-01','%Y-%m-%d'), interval 1 day)) ;
 
 -- ----------------------------
 -- View structure for v_collect_total_rows
@@ -21006,7 +21006,7 @@ delimiter ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_add_partitions`(IN _schemas VARCHAR (128),IN _tables VARCHAR (128), IN _add_date VARCHAR (128))
 BEGIN
 	/**
-		call p_add_partitions('kxtimingdata', 'collect_base_info', '2017-07-01')
+		call p_add_partitions('yftimingdata', 'collect_base_info', '2017-07-01')
 	**/
 
 	select count(1) into @exists_partitions 
@@ -21049,7 +21049,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `p_add_partitions_month`( IN _schema
 BEGIN
 
 /*
-call gdkxdl.p_add_partitions_month('kxtimingdata','collect_alarm_info', '2017-10-01');
+call yfmicro.p_add_partitions_month('yftimingdata','collect_alarm_info', '2017-10-01');
 */
 
 -- DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SELECT 'warring';
@@ -21158,7 +21158,7 @@ BEGIN
 	
 	INSERT into tmp_collect_overview_row_today(dtu_no, meter_address, meter_type_no, gateway_no, collect_time, rows, day_rows)
 	SELECT eq.dtu_no, eq.meter_address, eq.meter_type_no, eq.gateway_no, '2000-01-01', 0, 86400 / (ed.time_interval * 60) as time_interval 
-	  FROM gdkxdl.equipment_meter_config as eq LEFT JOIN gdkxdl.equipment_dtu_config as ed ON eq.dtu_no = ed.dtu_no
+	  FROM yfmicro.equipment_meter_config as eq LEFT JOIN yfmicro.equipment_dtu_config as ed ON eq.dtu_no = ed.dtu_no
 		WHERE eq.tag = 0 ORDER BY eq.dtu_no, eq.meter_address;
 		
 		
@@ -21187,13 +21187,13 @@ BEGIN
 	GROUP BY gateway_no;
 	
 	update tmp_collect_overview_today as td
-	LEFT JOIN ( SELECT meter_type_no, meter_type FROM gdkxdl.equipment_meter_type as eq WHERE tag = 0
+	LEFT JOIN ( SELECT meter_type_no, meter_type FROM yfmicro.equipment_meter_type as eq WHERE tag = 0
 	) as mt ON td.type_no = mt.meter_type_no 
 	SET td.type_desc = mt.meter_type
 	WHERE td.type_id = 1;		
 	
 	update tmp_collect_overview_today as td
-	LEFT JOIN ( SELECT gateway_no, gateway_desc FROM gdkxdl.equipment_gateway WHERE tag = 0
+	LEFT JOIN ( SELECT gateway_no, gateway_desc FROM yfmicro.equipment_gateway WHERE tag = 0
 	) as mt ON td.type_no = mt.gateway_no
 	SET td.type_desc = mt.gateway_desc
 	WHERE td.type_id = 2;
@@ -21237,7 +21237,7 @@ BEGIN
 	 DELETE FROM collect_total_active_power_minute WHERE collect_time >= @begintime and collect_time <= @endTime;	
 	 
 	 SET @sql_text := concat('
-	 INSERT INTO kxtimingdata.collect_total_active_power_minute(`collect_time`,`dtu_no`,`meter_address`,`total_active_power`)
+	 INSERT INTO yftimingdata.collect_total_active_power_minute(`collect_time`,`dtu_no`,`meter_address`,`total_active_power`)
 	 SELECT STR_TO_DATE(concat(DATE_FORMAT(collect_time,"%Y-%m-%d %H:"),(FLOOR((DATE_FORMAT(collect_time,"%i") / 15)) * 15), ":00"), "%Y-%m-%d %H:%i:%s") as collect_time, dtu_no, meter_address, AVG(total_active_power) as total_active_power
  FROM collect_base_info
 where collect_time >= ''', @begintime, '''
@@ -21573,12 +21573,12 @@ BEGIN
 	SELECT a.customer_id, b.customer_name, a.collect_date, a.total_p_at_ee 
 	FROM 
 	(SELECT _customer_id AS customer_id, collect_date, sum(diff_total_p_at_ee) AS total_p_at_ee FROM collect_total_p_at_ee_day 
-	  WHERE dtu_no in(SELECT DISTINCT dtu_no FROM gdkxdl.v_customer_for_meter WHERE customer_id = _customer_id) 
+	  WHERE dtu_no in(SELECT DISTINCT dtu_no FROM yfmicro.v_customer_for_meter WHERE customer_id = _customer_id) 
 	    AND collect_date BETWEEN _date1 AND _date2
 	  GROUP BY collect_date
 	 ) AS a, 
 	 
-	 (SELECT DISTINCT customer_id, customer_name FROM gdkxdl.v_customer_for_meter WHERE customer_id = _customer_id
+	 (SELECT DISTINCT customer_id, customer_name FROM yfmicro.v_customer_for_meter WHERE customer_id = _customer_id
 	 ) AS b
 	 
 	 WHERE a.customer_id = b.customer_id
@@ -21905,7 +21905,7 @@ BEGIN
 	 * call p_dtu_day_rowtotal('collect_base_info', '2017-08-25');
 	 */	
 	
-	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='kxtimingdata' AND table_name = _table;
+	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='yftimingdata' AND table_name = _table;
 	
 	IF @exists = 1 THEN	    		
 		IF ISNULL(_date) || LENGTH(TRIM(_date)) < 1 THEN
@@ -21970,7 +21970,7 @@ BEGIN
 	
 	INSERT into tmp_collect_base_info_row_today(dtu_no, meter_address, collect_time, day_rows, rows)
 	SELECT eq.dtu_no, eq.meter_address, '2000-01-01', 86400 / (ed.time_interval * 60) as time_interval, 0
-	  FROM gdkxdl.equipment_meter_config as eq LEFT JOIN gdkxdl.equipment_dtu_config as ed ON eq.dtu_no = ed.dtu_no
+	  FROM yfmicro.equipment_meter_config as eq LEFT JOIN yfmicro.equipment_dtu_config as ed ON eq.dtu_no = ed.dtu_no
 		WHERE eq.tag = 0 ORDER BY eq.dtu_no, eq.meter_address;		
 			
 	SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
@@ -22036,7 +22036,7 @@ BEGIN
 		
 	INSERT into tmp_collect_base_info_row_today(dtu_no, meter_address, meter_type_no, meter_type, gateway_no, gateway_desc)
 	SELECT dtu_no, meter_address, meter_type_no, meter_type, gateway_no, gateway_desc
-	  FROM gdkxdl.v_customer_room_meter 
+	  FROM yfmicro.v_customer_room_meter 
 	 where meter_config_tag = 0 
 	 ORDER BY dtu_no, meter_address;
 	 			
@@ -22111,7 +22111,7 @@ BEGIN
 	 * call p_month_rowcount('collect_base_info', '2018-03-22');
 	 */	
 	DECLARE sql_Text VARCHAR(1000);
-	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='kxtimingdata' AND table_name = _table;
+	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='yftimingdata' AND table_name = _table;
 	
 	IF @exists = 1 THEN
 		IF ISNULL(_date) || LENGTH(TRIM(_date)) < 1 THEN
@@ -22164,7 +22164,7 @@ BEGIN
 	 * call p_month_rowcount2('collect_base_info', '2018-03-22');
 	 */	
 	
-	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='kxtimingdata' AND table_name = _table;
+	SELECT COUNT(1) INTO @exists FROM information_schema.TABLES WHERE TABLE_SCHEMA='yftimingdata' AND table_name = _table;
 	
 	create temporary table month_rowcount_temp(
 			collect_time date NOT NULL,    

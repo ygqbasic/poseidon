@@ -5,6 +5,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
+
 	//_ "github.com/mattn/go-sqlite3"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -33,7 +34,7 @@ func InitDatabase() {
 	//数据库端口
 	dbPort := beego.AppConfig.String(dbType + "::db_port")
 
-	dbName2 := "kxtimingdata"
+	dbName2 := "yftimingdata"
 
 	switch dbType {
 	case "sqlite3":

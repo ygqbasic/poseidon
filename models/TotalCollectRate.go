@@ -1,10 +1,11 @@
 package models
 
 import (
-	"time"
 	"fmt"
-	"github.com/astaxie/beego/orm"
 	"strings"
+	"time"
+
+	"github.com/astaxie/beego/orm"
 )
 
 type TotalCollectRate struct {
@@ -27,7 +28,7 @@ type TotalCollectRateQueryParam struct {
 const C_SQL_TOTALCOLLECTRATE_ROWS = "SELECT count(1) as `rows` FROM v_collect_total_rate where collect_date BETWEEN '%s' and '%s' and customer_no like '%s%%' and customer_name like '%s%%' "
 const C_SQL_TOTALCOLLECTRATE = "SELECT collect_date, customer_no, customer_name, num, need_rows, `rows`, rate FROM v_collect_total_rate where collect_date BETWEEN '%s' and '%s' and customer_no like '%s%%' and customer_name like '%s%%' "
 
-func TotalCollectRatePageList(params *TotalCollectRateQueryParam) ([] *TotalCollectRate, int64) {
+func TotalCollectRatePageList(params *TotalCollectRateQueryParam) ([]*TotalCollectRate, int64) {
 	if len(strings.TrimSpace(params.CollectDate)) <= 0 {
 		return nil, 0
 	}
@@ -37,9 +38,9 @@ func TotalCollectRatePageList(params *TotalCollectRateQueryParam) ([] *TotalColl
 	beginTime := ary[0] + " 00:00:00"
 	endTime := ary[1] + " 23:59:59"
 
-	data := make([] *TotalCollectRate, 0)
+	data := make([]*TotalCollectRate, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 
 	var total int64
 	sql := fmt.Sprintf(C_SQL_TOTALCOLLECTRATE_ROWS, beginTime, endTime, params.CustomerNO, params.CustomerName)

@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50711
  Source Host           : localhost:3306
- Source Schema         : gdkxdl
+ Source Schema         : yfmicro
 
  Target Server Type    : MySQL
  Target Server Version : 50711
@@ -2437,7 +2437,7 @@ delimiter ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_add_partitions`(IN _schemas VARCHAR (128),IN _tables VARCHAR (128), IN _add_date VARCHAR (128))
 BEGIN
 	/**
-		call p_add_partitions('kxtimingdata', 'collect_base_info', '2017-07-01')
+		call p_add_partitions('yftimingdata', 'collect_base_info', '2017-07-01')
 	**/
 
 	select count(1) into @exists_partitions 
@@ -2480,7 +2480,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `p_add_partitions_month`( IN _schema
 BEGIN
 
 /*
-call gdkxdl.p_add_partitions_month('kxtimingdata','collect_alarm_info', '2017-10-01');
+call yfmicro.p_add_partitions_month('yftimingdata','collect_alarm_info', '2017-10-01');
 */
 
 -- DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SELECT 'warring';
@@ -2549,16 +2549,16 @@ BEGIN
 		SET @view_name := _view_name, @dates := REPLACE(substring_index(@view_name, '_', -3), '_',	'-');
 
 		IF _view_name like 'collect_base_info_%' THEN			
-			SET @sqlText := CONCAT("create or replace view kxtimingdata.", @view_name,
-														 " AS ( select * from kxtimingdata.collect_base_info where collect_time >= str_to_date('", 
+			SET @sqlText := CONCAT("create or replace view yftimingdata.", @view_name,
+														 " AS ( select * from yftimingdata.collect_base_info where collect_time >= str_to_date('", 
 														 @dates, 
 														 "','%Y-%m-%d') and collect_time < date_add(str_to_date('",
 														 @dates, "','%Y-%m-%d'), interval 1 day))"
 														 );
 
 		ELSEIF _view_name like 'collect_attach_info_%' THEN		
-			SET @sqlText := CONCAT("create or replace view kxtimingdata.",	@view_name, 
-														 " AS ( select * from kxtimingdata.collect_attach_info where collect_time >= str_to_date('" ,
+			SET @sqlText := CONCAT("create or replace view yftimingdata.",	@view_name, 
+														 " AS ( select * from yftimingdata.collect_attach_info where collect_time >= str_to_date('" ,
 														 @dates,
 														 "','%Y-%m-%d') and collect_time < date_add(str_to_date('",
 														 @dates, 
@@ -2566,16 +2566,16 @@ BEGIN
 														 );
 
 		ELSEIF _view_name like 'collect_other_info_%' THEN
-			SET @sqlText := CONCAT("create or replace view kxtimingdata.",	@view_name, 
-														 " AS ( select * from kxtimingdata.collect_other_info where collect_time >= str_to_date('" ,
+			SET @sqlText := CONCAT("create or replace view yftimingdata.",	@view_name, 
+														 " AS ( select * from yftimingdata.collect_other_info where collect_time >= str_to_date('" ,
 														 @dates,
 														 "','%Y-%m-%d') and collect_time < date_add(str_to_date('",
 														 @dates, 
 														 "','%Y-%m-%d'), interval 1 day))"
 														 );		
 	  ELSEIF _view_name like 'collect_alarm_info_%' THEN
-			SET @sqlText := CONCAT("create or replace view kxtimingdata.",	@view_name, 
-														 " AS ( select * from kxtimingdata.collect_alarm_info where collect_time >= str_to_date('" ,
+			SET @sqlText := CONCAT("create or replace view yftimingdata.",	@view_name, 
+														 " AS ( select * from yftimingdata.collect_alarm_info where collect_time >= str_to_date('" ,
 														 @dates,
 														 "','%Y-%m-%d') and collect_time < date_add(str_to_date('",
 														 @dates, 
@@ -2630,7 +2630,7 @@ BEGIN
 			update dtu_age_temp 
 			   set begin_time = (
 			SELECT collect_time AS begin_time 
-				FROM kxtimingdata.collect_base_info 
+				FROM yftimingdata.collect_base_info 
 				WHERE dtu_no = @dtu_no
 					AND meter_address = @meter_address
 					limit 1
@@ -2641,7 +2641,7 @@ BEGIN
 			update dtu_age_temp 
 			   set end_time = (
 			SELECT collect_time AS end_time 
-				FROM kxtimingdata.collect_base_info 
+				FROM yftimingdata.collect_base_info 
 				WHERE dtu_no = @dtu_no
 					AND meter_address = @meter_address
 				ORDER BY collect_time DESC

@@ -4,14 +4,15 @@ import (
 	"strings"
 
 	"fmt"
+	"io/ioutil"
+	"net/http"
+	"time"
+
 	"github.com/astaxie/beego"
 	"github.com/tidwall/gjson"
 	"github.com/ygqbasic/poseidon/enums"
 	"github.com/ygqbasic/poseidon/models"
 	"github.com/ygqbasic/poseidon/utils"
-	"io/ioutil"
-	"net/http"
-	"time"
 )
 
 type HomeController struct {
@@ -214,7 +215,7 @@ func (this *HomeController) GetCustomerZone() {
 }
 
 func (this *HomeController) GetWeather() {
-	url := "http://api.openweathermap.org/data/2.5/weather?q=Guangzhou&appid=dafef1a9be486b5015eb92330a0add7d"
+	url := "http://api.openweathermap.org/data/2.5/weather?q=Shanghai&appid=dafef1a9be486b5015eb92330a0add7d"
 	ch := make(chan string)
 
 	go func(url string, ch chan string) {

@@ -1,10 +1,11 @@
 package models
 
 import (
-	"time"
-	"strings"
-	"github.com/astaxie/beego/orm"
 	"fmt"
+	"strings"
+	"time"
+
+	"github.com/astaxie/beego/orm"
 )
 
 type TotalActivePowerMinute struct {
@@ -21,7 +22,7 @@ type TotalActivePowerMinuteQueryParam struct {
 	MeterAddress string
 }
 
-func TotalActivePowerMinutePageList(params *TotalActivePowerMinuteQueryParam) ([] *TotalActivePowerMinute, int64) {
+func TotalActivePowerMinutePageList(params *TotalActivePowerMinuteQueryParam) ([]*TotalActivePowerMinute, int64) {
 	if len(strings.TrimSpace(params.CollectTime)) <= 0 {
 		return nil, 0
 	}
@@ -35,9 +36,9 @@ func TotalActivePowerMinutePageList(params *TotalActivePowerMinuteQueryParam) ([
 	beginTime := ary[0] + " 00:00:00"
 	endTime := ary[1] + " 23:59:59"
 
-	data := make([] *TotalActivePowerMinute, 0)
+	data := make([]*TotalActivePowerMinute, 0)
 	o := orm.NewOrm()
-	o.Using("kxtimingdata")
+	o.Using("yftimingdata")
 	sql := fmt.Sprintf(`SELECT collect_time, dtu_no, meter_address, total_active_power		 
 		FROM collect_total_active_power_minute 
        where collect_time >= '%s' and collect_time <= '%s'
@@ -63,7 +64,7 @@ func TotalActivePowerMinutePageList(params *TotalActivePowerMinuteQueryParam) ([
 	return data, total
 }
 
-func TotalActivePowerMinuteDataList(params *TotalActivePowerMinuteQueryParam) [] *TotalActivePowerMinute {
+func TotalActivePowerMinuteDataList(params *TotalActivePowerMinuteQueryParam) []*TotalActivePowerMinute {
 	params.Limit = -1
 	params.Sort = "collect_time"
 	params.Order = "asc"
